@@ -1,0 +1,547 @@
+body{
+    font-family: "Microsoft YaHei UI";
+}
+
+.bg-primary1 {
+  font-size: 20px;
+  color: #fff;
+  background-color: #428bca;
+ 
+  
+}
+
+.bg-info1 {
+  background-color: #d9edf7;
+  
+  font-size: 20px;
+}
+.bg-danger1 {
+  background-color: #f2dede;
+  font-size:20px;
+}
+
+.navbar-default{
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.25);
+}
+.navbar-default .navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: #676767;
+    height: 70px;
+    line-height: 35px;
+}
+.navbar-default .navbar-nav>li>a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    height: 70px;
+    line-height: 35px;
+}
+.navbar-default .navbar-toggle:hover{
+    border-color: #40D2B1;
+    background-color: rgb(69,210,184);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #1C9982;
+}
+/*home*/
+#home{
+    margin-top: 71px;
+    background: url("../images/login_bg1.jpg");
+    background-size: cover;
+    color: #ffffff;
+    height: 400px;
+    text-align: center;
+    width: 100%;
+}
+/*黑滤镜*/
+.filter{
+    width:100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 90px 0px;
+}
+.col-lg-10{
+    position: center;
+}
+#home h1{
+    font-weight: bold;
+    font-family: 黑体;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: center;
+    letter-spacing: 3px;
+}
+#home p.headEn{
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    position: center;
+    letter-spacing: 2px;
+}
+#home p.slogan{
+    font-weight: bold;
+    font-family: 黑体;
+    font-size: large;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    position: center;
+    letter-spacing: 2px;
+}
+/*平台简介部分*/
+#introduction{
+    margin-top: 0;
+    background-color: #f4f4f4;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+#introduction h1{
+    margin-bottom: -20px;
+    line-height: 50px;
+    font-size: 30px;
+    color: #333;
+    letter-spacing: 3px;
+}
+#introduction h2{
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+#introduction p{
+    color: #333;
+}
+/*数据库选择部分*/
+#data-bases{
+    padding: 50px 0;
+    text-align: center;
+}
+.title{
+    text-align: left;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    line-height: 50px;
+    font-size: 30px;
+    color: #333;
+    letter-spacing: 3px;
+}
+.title span{
+    margin-left: 5px;
+    font-size: 20px;
+}
+#data-bases .col-md-3 {
+    padding: 15px;
+}
+#data-bases .col-md-3:hover{
+    background: #f7f7f7;
+    box-shadow: 1px 1px 4px #ccc;
+}
+#data-bases a{
+    color: #373737;
+    text-decoration: none;
+}
+#data-bases images{
+    margin: 0 auto;
+}
+#data-bases h3{
+    font-weight: bold;
+}
+
+
+
+/*联系我们*/
+#contact{
+    background: url("../images/login_bg1.jpg")no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: auto;
+}
+
+#contact h2{
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+#contact p{
+font-size: 18px;
+}
+
+.form-control{
+    border: none;
+    border-radius: 0;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#contact textarea.form-control{
+    hight:auto;
+}
+
+#contact input[type=submit]{
+    background:#40D2B1;
+    color: #ffffff;
+    font-weight: bold;
+    /*淡入淡出效果*/
+    transition:all 1.5s;
+}
+#contact input[type=submit]:hover{
+    background-color: #1C9982;
+}
+
+/*footer*/
+footer{
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
+
+/*搜索*/
+
+#search{
+    background: url("../images/背景图科技感.jpg")no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: auto;
+}
+#search .container{
+    margin-top: 10px;
+}
+#search input[type=submit]{
+    background:#40D2B1;
+    color: #ffffff;
+    font-weight: bold;
+    /*淡入淡出效果*/
+    transition:all 1.5s;
+}
+#search input[type=submit]:hover{
+    background-color: #1C9982;
+}
+
+
+.chooseSearchType1 {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.chooseSearchType1 .search{
+    color: #41d2b2;
+}
+
+.chooseSearchType1 .searchByPerson{
+    color: #ffffff;
+}
+.chooseSearchType1 .search:hover{
+    text-decoration:none;
+}
+.chooseSearchType1 .searchByPerson:hover{
+    text-decoration:none;
+    color:#40D2B1 ;
+}
+
+.chooseSearchType2 {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.chooseSearchType2 .searchByPerson{
+    color: #41d2b2;
+}
+
+.chooseSearchType2 .search{
+    color: #ffffff;
+}
+.chooseSearchType2 .search:hover{
+    text-decoration:none;
+    color:#40D2B1 ;
+}
+.chooseSearchType2 .searchByPerson:hover{
+    text-decoration:none;
+}
+
+/*表单界面*/
+#result-table{
+    padding: 90px 0px;
+    color: #222222;
+    height: auto;
+    background-image: url("../images/download.jpg");
+    background-size: cover;
+}
+#result-table .container{
+    margin-top: 10px;
+}
+
+/*分析界面*/
+
+
+#maincontext .container{
+    margin-top: 80px;
+
+}
+
+
+/*去掉li的小圆点儿*/
+Nav>li{
+    list-style-type:none;
+}
+Nav>li>a{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    height: 70px;
+    line-height: 35px;
+}
+
+
+
+/*人物界面*/
+#profiletop{
+    margin-top: 20px;
+    background: url("../images/政治.jpg")no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: 300px;
+    text-align: center;
+    width: 100%;
+}
+#profiletop h1{
+    font-weight: bold;
+    font-family: 黑体;
+    font-size: 50px;
+    margin-top: 35px;
+    margin-bottom: -5px;
+    position: center;
+    letter-spacing: 10px;
+}
+#profiletop h2{
+    font-weight: bold;
+    font-family: 黑体;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: center;
+    letter-spacing: 5px;
+}
+#profile{
+    background-size: cover;
+    color: #ffffff;
+    height: auto;
+    text-align: center;
+    width: 100%;
+
+}
+#profile .container .col-md-4{
+    padding-top: 20px;
+    padding-right: -50px;
+}
+.photo{
+    max-height: 280px;
+    overflow: hidden;
+    width: 260px;
+}
+
+.briefintro{
+    padding: 35px 0px;
+    width: 260px;
+    color: #fff;
+    background-color: #493D8B;
+}
+#profile .container .col-md-8{
+    color: rgb(69, 69, 69);
+    text-align: left;
+    font-family: 微软雅黑;
+    padding-top: 20px;
+}
+.person-title{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: 黑体;
+    font-weight: bolder;
+    color: rgb(69, 69, 69);
+}
+.person-title span {
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: Montserrat;
+    color: #8b8b8b;
+}
+
+.statementindex-title{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: 黑体;
+    font-weight: bolder;
+    color: rgb(69, 69, 69);
+}
+.statementindex-title span{
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: Montserrat;
+    color: #8b8b8b;
+}
+
+
+/*参会人员界面*/
+#persons-top{
+    margin-top: 20px;
+    background: url("../images/政治.jpg")no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    height: 300px;
+    text-align: center;
+    width: 100%;
+}
+
+#persons-top h1{
+    font-weight: bold;
+    font-family: 黑体;
+    font-size: 50px;
+    margin-top: 35px;
+    margin-bottom: -5px;
+    position: center;
+    letter-spacing: 10px;
+}
+#persons-top h2{
+    font-weight: bold;
+    font-family: 黑体;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: center;
+    letter-spacing: 5px;
+}
+
+/*英国数据库检索部分*/
+.search{
+    padding: 90px 0px;
+    color: #222222;
+    height: auto;
+    background-image: url("../images/背景2.jpg");
+    background-size: cover;
+}
+.search .container{
+    margin-top: 70px;
+
+}
+.featurette{
+    margin-top: 10px;
+}
+.search input[type=submit]{
+    background: #357bb7;
+    color: #ffffff;
+    font-weight: bold;
+    /*淡入淡出效果*/
+    transition:all 1.5s;
+}
+.search input[type=submit]:hover{
+    background-color: #30699e;
+}
+
+
+
+
+.search2{
+    padding: 90px 0px;
+    color: #222222;
+    height: auto;
+    background-image: url("../images/背景3.jpg");
+    background-size: cover;
+}
+.search2 .container{
+    margin-top: 70px;
+
+}
+
+.search2 input[type=submit]{
+    background: #357bb7;
+    color: #ffffff;
+    font-weight: bold;
+    /*淡入淡出效果*/
+    transition:all 1.5s;
+}
+.search2 input[type=submit]:hover{
+    background-color: #30699e;
+}
+
+
+.sou{
+    margin-top: 10px;
+}
+
+
+
+
+/*UK-result*/
+body{
+    position: relative;
+}
+#result-UK{
+    padding: 90px 0px;
+    color: #222222;
+    height: auto;
+    background-image: url("../images/背景2.jpg");
+    background-size: cover;
+}
+#result-UK .container{
+    margin-top: 10px;
+}
+
+
+/*browse页面*/
+#browse-section{
+    padding-top: 90px;
+}
+.page-header{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.page-header h1{
+    margin: 0;
+    font-size: 25px;
+}
+
+.page-header h2{
+    margin: 20px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.meeting-name{
+    text-align: center;
+}
+.meeting-date{
+    text-align: center;
+}
+.more-info h3{
+    font-size: 16px;
+}
+.more-info p{
+    font-size: 16px;
+}
+
+#persons{
+    margin-top: 25px;
+    padding-top: 10px;
+}
+#persons h3{
+    font-size: 16px;
+    font-weight: bold;
+}
+#preview-download{
+    margin-top: 25px;
+    padding-top: 10px;
+}
+.buttons{
+    text-align: center;
+}
+
+#myNav{
+    position: fixed;
+    z-index: 1;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!--IE8开启标准渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--定义视窗，页面缩放比1：1，禁止用户缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>专业版预测</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/adjust.css">
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <!--可以适应设备-->
+        <div class="navbar-header">
+            <!--给这个button绑定到navbar-collapse类-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">战疫助手> 专业版预测</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+
+        <!--右上角导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="infection.html" target="_blank">疫情数据</a></li>
+                <li><a href="news.html" target="_blank">舆情数据</a></li>
+                <li><a href="predict-easy.html" target="_blank">实用版预测</a></li>
+                <li><a href="predict-pro.html" target="_blank">专业版预测</a></li>
+            </ul>
+        </div>
+        <!--右上角导航-->
+
+    </div>
+</nav>
+<!--导航栏-->
+
+
+<!--搜索部分-专业版-->
+<div class="bg">
+    <div class="filter">
+        <div class="search2">
+            <div class="container">
+
+                <!--搜索-->
+                <!--表单传送到当前界面，方法为post-->
+                <div class="sou" style="margin-top: 100px;">
+                    <h4 class="title">
+                        参数设置
+                    </h4>
+                    <form action="InfoServlet" method="post" style="margin-top: 30px;">
+                        <!--class均为form-control(这是在bootstrap里默认的)-->
+                        <div class="forms">
+
+                            <div class="col-md-4">
+                                <!--输入传染率-->
+                                <div class="form-group">
+                                    <label for="keyword1" style="font-weight:bold;font-family: 微软雅黑">输入初始易感者人数</label>
+                                    <input id="keyword1" type="text" placeholder="输入人数(武汉人数为14000000)" class="form-control" name="Npara"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入传染率-->
+                                <div class="form-group">
+                                    <label for="keyword2">输入对疫情知情者的感染率与对不知情者感染率的比值</label>
+                                    <input id="keyword2" type="text" placeholder="输入比值(如 0.5)" class="form-control" name="p"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword3">输入第二阶段开始时间（第几天）</label>
+                                    <input id="keyword3" type="text" placeholder="输入第几天（例如 输入“3”代表第三天开始第二阶段）" class="form-control" name="stage1"/>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword4">输入第三阶段开始时间（第几天）</label>
+                                    <input id="keyword4" type="text" placeholder="输入第几天（例如 输入“3”代表第三天开始第三阶段）" class="form-control" name="stage2"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword5">输入第四阶段开始时间（第几天）</label>
+                                    <input id="keyword5" type="text" placeholder="输入第几天（例如 输入“3”代表第三天开始第四阶段）" class="form-control" name="stage3"/>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword6">输入第一阶段每个患者每日接触人数</label>
+                                    <input id="keyword6" type="text" placeholder="输入人数" class="form-control" name="r11"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword7">输入第一阶段每个潜伏者每日接触人数</label>
+                                    <input id="keyword7" type="text" placeholder="输入人数" class="form-control" name="r12"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword8">输入第二阶段每个患者每日接触人数</label>
+                                    <input id="keyword8" type="text" placeholder="输入人数" class="form-control" name="r21"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword9">输入第二阶段每个潜伏者每日接触人数</label>
+                                    <input id="keyword9" type="text" placeholder="输入人数" class="form-control" name="r22"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword10">输入第三阶段每个患者每日接触人数</label>
+                                    <input id="keyword10" type="text" placeholder="输入人数" class="form-control" name="r31"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword11">输入第三阶段每个潜伏者每日接触人数</label>
+                                    <input id="keyword11" type="text" placeholder="输入人数" class="form-control" name="r32"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword12">输入第四阶段每个患者每日接触人数</label>
+                                    <input id="keyword12" type="text" placeholder="输入人数" class="form-control" name="r41"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <!--输入每个患者接触人数-->
+                                <div class="form-group">
+                                    <label for="keyword13">输入第四阶段每个潜伏者每日接触人数</label>
+                                    <input id="keyword13" type="text" placeholder="输入人数" class="form-control" name="r42"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入传染率-->
+                                <div class="form-group">
+                                    <label for="keyword14">输入第一阶段对疫情知情的人数占总人数的比例</label>
+                                    <input id="keyword14" type="text" placeholder="输入比例(如 0.5)" class="form-control" name="j"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入传染率-->
+                                <div class="form-group">
+                                    <label for="keyword15">输入第二阶段对疫情知情的人数占总人数的比例</label>
+                                    <input id="keyword15" type="text" placeholder="输入倍数(如 0.5)" class="form-control" name="k"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!--输入传染率-->
+                                <div class="form-group">
+                                    <label for="keyword16">输入第三阶段对疫情知情的人数占总人数的比例</label>
+                                    <input id="keyword16" type="text" placeholder="输入倍数(如 0.5)" class="form-control" name="m"/>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4" style="margin-top: 25px">
+                                <input type="submit" class="form-control" value="开始预测"/>
+                            </div>
+                        </div>
+
+                    </form>
+                    <!--搜索-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--footer底部区域-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>©copyright&nbsp;2020&nbsp;武汉大学信息管理学院</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer底部区域-->
+
+<!--jquery一定要比bootstrap先引入！-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

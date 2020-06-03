@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!--IE8开启标准渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--定义视窗，页面缩放比1：1，禁止用户缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>舆情数据</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/adjust.css">
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <!--可以适应设备-->
+        <div class="navbar-header">
+            <!--给这个button绑定到navbar-collapse类-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">战疫助手> 舆情数据</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+
+        <!--右上角导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="infection.html" target="_blank">疫情数据</a></li>
+                <li><a href="news.html" target="_blank">舆情数据</a></li>
+                <li><a href="predict-easy.html" target="_blank">实用版预测</a></li>
+                <li><a href="predict-pro.html" target="_blank">专业版预测</a></li>
+            </ul>
+        </div>
+        <!--右上角导航-->
+
+    </div>
+</nav>
+<!--导航栏-->
+
+<!--style="background: url("../images/fengchao.jpg")"-->
+<div class="bg">
+    <div class="filter">
+<section id="daily-infection">
+
+    <div class="container">
+        <div class="title" style="padding-left: 0px;">
+            各国干预措施
+        </div>
+    </div>
+<!--筛选国家-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <script>
+                    var count=0;
+                    function china() {
+                        $(".timeline-china").toggle();
+                        change();
+                    }
+                    function change(){
+                        if(count==0){
+                            document.getElementById('china_button').style.backgroundColor='#ffffff';
+                            document.getElementById('china_button').style.color='#000000';
+                            count++;
+                        }
+                        else{
+                            document.getElementById('china_button').style.backgroundColor='#1abc9c';
+                            document.getElementById('china_button').style.color='#ffffff';
+                            count=0;
+                        }
+                    }
+                    var count2=0;
+                    function america() {
+                        $(".timeline-america").toggle();
+                        change2();
+                    }
+                    function change2(){
+                        if(count2==0){
+                            document.getElementById('america_button').style.backgroundColor='#ffffff';
+                            document.getElementById('america_button').style.color='#000000';
+                            count2++;
+                        }
+                        else{
+                            document.getElementById('america_button').style.backgroundColor='#ffb3a7';
+                            document.getElementById('america_button').style.color='#ffffff';
+                            count2=0;
+                        }
+                    }
+
+
+                    var count3=0;
+                    function uk() {
+                        $(".timeline-uk").toggle();
+                        change3();
+                    }
+                    function change3(){
+                        if(count3==0){
+                            document.getElementById('uk_button').style.backgroundColor='#ffffff';
+                            document.getElementById('uk_button').style.color='#000000';
+                            count3++;
+                        }
+                        else{
+                            document.getElementById('uk_button').style.backgroundColor='#626dbc';
+                            document.getElementById('uk_button').style.color='#ffffff';
+                            count3=0;
+                        }
+                    }
+
+                    var count4=0;
+                    function italy() {
+                        $(".timeline-italy").toggle();
+                        change4();
+                    }
+                    function change4(){
+                        if(count4==0){
+                            document.getElementById('italy_button').style.backgroundColor='#ffffff';
+                            document.getElementById('italy_button').style.color='#000000';
+                            count4++;
+                        }
+                        else{
+                            document.getElementById('italy_button').style.backgroundColor='#1974b7';
+                            document.getElementById('italy_button').style.color='#ffffff';
+                            count4=0;
+                        }
+                    }
+
+                    var count5=0;
+                    function spain() {
+                        $(".timeline-spain").toggle();
+                        change5();
+                    }
+                    function change5(){
+                        if(count5==0){
+                            document.getElementById('spain_button').style.backgroundColor='#ffffff';
+                            document.getElementById('spain_button').style.color='#000000';
+                            count5++;
+                        }
+                        else{
+                            document.getElementById('spain_button').style.backgroundColor='#ff8fa4';
+                            document.getElementById('spain_button').style.color='#ffffff';
+                            count5=0;
+                        }
+                    }
+
+                    var count6=0;
+                    function korea() {
+                        $(".timeline-korea").toggle();
+                        change6();
+                    }
+                    function change6(){
+                        if(count6==0){
+                            document.getElementById('korean_button').style.backgroundColor='#ffffff';
+                            document.getElementById('korean_button').style.color='#000000';
+                            count6++;
+                        }
+                        else{
+                            document.getElementById('korean_button').style.backgroundColor='#7d5a5a';
+                            document.getElementById('korean_button').style.color='#ffffff';
+                            count6=0;
+                        }
+                    }
+
+
+                </script>
+                <div class="group-choose" style="margin-bottom: 20px; text-align: center;">
+                    <p style="font-family: 微软雅黑;font-size:25px; font-weight: bold">筛选国家</p>
+                    <span class="group">
+                        <button type="button" class="btn btn-default" onclick="china()" id="china_button" style="background-color:#1cbc9d;color:#ffffff;width: 10px; height: 10px;"></button>
+                        <span style="font-size: 15px">中国</span>
+                    </span>
+                    <span class="group">
+                        <button type="button" class="btn btn-default" onclick="america()" id="america_button" style="background-color:#ffb3a7;color:#ffffff;width: 10px; height: 10px;"></button>
+                        <span style="font-size: 15px">美国</span>
+                    </span>
+                    <span class="group" role="group">
+                        <button type="button" class="btn btn-default" onclick="italy()" id="italy_button" style="background-color:#1974b7;color:#ffffff;width: 10px; height: 10px;"></button>
+                        <span style="font-size: 15px">意大利</span>
+                    </span>
+                    <span class="group" role="group">
+                        <button type="button" class="btn btn-default" onclick="spain()" id="spain_button" style="background-color:#ff8fa4;color:#ffffff;width: 10px; height: 10px;"></button>
+                        <span style="font-size: 15px">西班牙</span>
+                    </span>
+                    <span class="group" role="group">
+                        <button type="button" class="btn btn-default" onclick="korea()" id="korean_button" style="background-color:#7d5a5a;color:#ffffff;width: 10px; height: 10px;"></button>
+                        <span style="font-size: 15px">韩国</span>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--时间线-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="main-timeline">
+
+                    <!--每个新闻单元就是<div class="timeline-XXX"></div>中包括的全部内容-->
+
+                    <!--中国新闻单元 div class="timeline-china"-->
+                    <div class="timeline-china">
+                        <!--此处粘贴日期-->
+                        <p class="timeline-date" style="margin-left: 300px;font-weight: bold;font-size: 20px">
+                            2019.12.30
+                        </p>
+                        <!--圆点-->
+                        <div class="timeline-icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <!--框框-->
+                        <div class="timeline-content right">
+                            <h2 class="title" style="font-size: 20px">此处粘贴新闻概要</h2>
+                            <!--每个新闻单元需要重新设置与详细信息对应的data-target，比方说这里，将href设置为href="#collapseExample-1-1"  -->
+                            <a class="btn read-more" role="button" data-toggle="collapse" href="#collapseExample-1-1" aria-expanded="false" aria-controls="collapseExample">
+                                详细信息
+                            </a>
+
+                            <div class="collapse" id="collapseExample-1-1">
+                                <div class="well" style="margin-top: 10px">
+                                    噜啦啦噜啦啦噜啦噜啦嘿
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--美国新闻单元-->
+                    <div class="timeline-america">
+                        <!--此处粘贴日期-->
+                        <p class="timeline-date" style="margin-left: 300px;font-weight: bold;font-size: 20px">
+                            此处粘贴日期
+                        </p>
+                        <!--圆点-->
+                        <div class="timeline-icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <!--框框-->
+                        <div class="timeline-content right">
+                            <!--这里需要设置新闻概要-->
+                            <h2 class="title" style="font-size: 20px">此处粘贴新闻概要</h2>
+                            <!--每个新闻单元需要重新设置与详细信息对应的data-target，比方说这里，将href设置为href="#collapseExample-2-1"  -->
+                            <a class="btn read-more" role="button" data-toggle="collapse" href="#collapseExample-2-1" aria-expanded="false" aria-controls="collapseExample">
+                                详细信息
+                            </a>
+
+                            <div class="collapse" id="collapseExample-2-1">
+                                <div class="well" style="margin-top: 10px">
+                                    噜啦啦噜啦啦噜啦噜啦嘿
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--意大利新闻单元-->
+                    <div class="timeline-italy">
+                        <!--此处粘贴日期-->
+                        <p class="timeline-date" style="margin-left: 300px;font-weight: bold;font-size: 20px">
+                            此处粘贴日期
+                        </p>
+                        <!--圆点-->
+                        <div class="timeline-icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <!--框框-->
+                        <div class="timeline-content right">
+
+                            <h2 class="title" style="font-size: 20px">此处粘贴新闻概要</h2>
+                            <!--每个新闻单元需要重新设置与详细信息对应的data-target，比方说这里，将href设置为href="#collapseExample-4-1"  -->
+                            <a class="btn read-more" role="button" data-toggle="collapse" href="#collapseExample-4-1" aria-expanded="false" aria-controls="collapseExample">
+                                详细信息
+                            </a>
+
+                            <div class="collapse" id="collapseExample-4-1">
+                                <div class="well" style="margin-top: 10px">
+                                    噜啦啦噜啦啦噜啦噜啦嘿
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--西班牙新闻单元-->
+                    <div class="timeline-spain">
+                        <!--此处粘贴日期-->
+                        <p class="timeline-date" style="margin-left: 300px;font-weight: bold;font-size: 20px">
+                            此处粘贴日期
+                        </p>
+                        <!--圆点-->
+                        <div class="timeline-icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <!--框框-->
+                        <div class="timeline-content right">
+
+                            <h2 class="title" style="font-size: 20px">此处粘贴新闻概要</h2>
+
+                            <!--每个新闻单元需要重新设置与详细信息对应的data-target，比方说这里，将href设置为href="#collapseExample-5-1"  -->
+                            <a class="btn read-more" role="button" data-toggle="collapse" href="#collapseExample-5-1" aria-expanded="false" aria-controls="collapseExample">
+                                详细信息
+                            </a>
+
+                            <div class="collapse" id="collapseExample-5-1">
+                                <div class="well" style="margin-top: 10px">
+                                    噜啦啦噜啦啦噜啦噜啦嘿
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--韩国新闻单元-->
+                    <div class="timeline-korea">
+                        <!--此处粘贴日期-->
+                        <p class="timeline-date" style="margin-left: 300px;font-weight: bold;font-size: 20px">
+                            此处粘贴日期
+                        </p>
+                        <!--圆点-->
+                        <div class="timeline-icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <!--框框-->
+                        <div class="timeline-content right">
+                            <h2 class="title" style="font-size: 20px">此处粘贴新闻概要</h2>
+                            <!--每个新闻单元需要重新设置与详细信息对应的data-target，比方说这里，将href设置为href="#collapseExample-6-1"  -->
+                            <a class="btn read-more" role="button" data-toggle="collapse" href="#collapseExample-6-1" aria-expanded="false" aria-controls="collapseExample">
+                                详细信息
+                            </a>
+
+                            <div class="collapse" id="collapseExample-6-1">
+                                <div class="well" style="margin-top: 10px">
+                                    噜啦啦噜啦啦噜啦噜啦嘿
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>
+    </div>
+</div>
+<!--jquery一定要比bootstrap先引入！-->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+@CHARSET "UTF-8";
+/* 测试参数设置CSS代码  */
+/* form样式 */
+#agentset {
+	background: #404040;
+	margin: 0px 0px 5px 5px;
+}
+
+/* 主体名称样式 */
+.agentname {
+	color: white;
+	font-size: 20px;
+	margin: 0px 0px 5px 10px;
+/* 	text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de,
+		0 0 5px #ff00de, 0 0 6px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de; */
+}
+
+/* label样式 */
+.bar {
+	color: white;
+	text-align: center;
+	margin: 0px 0px 5px 15px;
+/* 	text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #ff00de, */
+/* 		0 0 15px #ff00de, 0 0 18px #ff00de, 0 0 21px #ff00de, 0 0 23px #ff00de; */
+}
+
+/* 滑动条样式 */
+.rangebar {
+	width: 150px;
+	color: red;
+}
+
+#button {
+	-moz-box-shadow: 0px 10px 14px -7px #b39cf0;
+	-webkit-box-shadow: 0px 10px 14px -7px #b39cf0;
+	box-shadow: 0px 10px 14px -7px #b39cf0;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c5eaf0
+		), color-stop(1, #f0e8f0));
+	background: -moz-linear-gradient(top, #c5eaf0 5%, #f0e8f0 100%);
+	background: -webkit-linear-gradient(top, #c5eaf0 5%, #f0e8f0 100%);
+	background: -o-linear-gradient(top, #c5eaf0 5%, #f0e8f0 100%);
+	background: -ms-linear-gradient(top, #c5eaf0 5%, #f0e8f0 100%);
+	background: linear-gradient(to bottom, #c5eaf0 5%, #f0e8f0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c5eaf0',
+		endColorstr='#f0e8f0', GradientType=0);
+	background-color: #c5eaf0;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid #301754;
+	display: inline-block;
+	cursor: pointer;
+	color: #0f010f;
+	font-family: Verdana;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 10px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #fcfcfc;
+	margin: 0px 0px 5px 40px;
+}
+
+#button:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0e8f0
+		), color-stop(1, #c5eaf0));
+	background: -moz-linear-gradient(top, #f0e8f0 5%, #c5eaf0 100%);
+	background: -webkit-linear-gradient(top, #f0e8f0 5%, #c5eaf0 100%);
+	background: -o-linear-gradient(top, #f0e8f0 5%, #c5eaf0 100%);
+	background: -ms-linear-gradient(top, #f0e8f0 5%, #c5eaf0 100%);
+	background: linear-gradient(to bottom, #f0e8f0 5%, #c5eaf0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0e8f0',
+		endColorstr='#c5eaf0', GradientType=0);
+	background-color: #f0e8f0;
+}
+
+#button:active {
+	
+}
+
+#mylist {
+	
+}
+
+.testarea {
+	-moz-box-shadow: 0px 0px 14px -7px #b39cf0;
+	-webkit-box-shadow: 0px 0px 14px -7px #b39cf0;
+	box-shadow: 0px 0px 14px -7px #b39cf0;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff
+		), color-stop(1, #e2e8eb));
+	background: -moz-linear-gradient(top, #ffffff 5%, #e2e8eb 100%);
+	background: -webkit-linear-gradient(top, #ffffff 5%, #e2e8eb 100%);
+	background: -o-linear-gradient(top, #ffffff 5%, #e2e8eb 100%);
+	background: -ms-linear-gradient(top, #ffffff 5%, #e2e8eb 100%);
+	background: linear-gradient(to bottom, #ffffff 5%, #e2e8eb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',
+		endColorstr='#e2e8eb', GradientType=0);
+	background-color: #ffffff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #301754;
+	display: inline-block;
+	cursor: pointer;
+	color: #0f010f;
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 3px 10px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #fcfcfc;
+}
+
+.testarea:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e2e8eb
+		), color-stop(1, #ffffff));
+	background: -moz-linear-gradient(top, #e2e8eb 5%, #ffffff 100%);
+	background: -webkit-linear-gradient(top, #e2e8eb 5%, #ffffff 100%);
+	background: -o-linear-gradient(top, #e2e8eb 5%, #ffffff 100%);
+	background: -ms-linear-gradient(top, #e2e8eb 5%, #ffffff 100%);
+	background: linear-gradient(to bottom, #e2e8eb 5%, #ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2e8eb',
+		endColorstr='#ffffff', GradientType=0);
+	background-color: #e2e8eb;
+}
+
+.testarea:active {
+	position: relative;
+	top: 1px;
+}
+
+#netlogo {
+	box-shadow: 5px 5px 5px;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	background: #1b1b1b;
+	padding-left: 5px;
+	width:1180;
+}
+
+/* 社会形势研判CSS代码  */
+
+#testtable {
+	position: absolute;
+	left: 718px;
+	top: 87px;
+	color: white;
+	width: 380px;
+	height: 548px;
+	background: #1b1b1b;
+	font-size: 15px;
+}
+
+#outputvalue {
+	margin: 20px 0px 0px 0px;
+}
+
+#test-table {
+	width: 500px;
+	height: 30px;
+	border: 1px;
+	font-size: 20px;
+}
+
+#table {
+	width: 360px;
+	border: 1px;
+}
+
+#test-province {
+	height: 30px;
+	text-align: center;
+	color: red;
+	font-size: 20px;
+}
+
+tr td {
+	text-align: center;
+	padding: .5em;
+	border: 1px solid gray;
+	height: 30px;
+	font-size: 16px;
+}
+tr {
+	width: 20px;
+}
+
+#test-value1 {
+	color: red;
+}
+
+#test-value2 {
+	color: red;
+}
+
+#test-value3 {
+	color: red;
+}
+
+#test-value4 {
+	color: red;
+}
+
+#test-value5 {
+	color: red;
+}
+
+#test-value6 {
+	color: red;
+}
+
+#test-value7 {
+	color: red;
+}
+
+#test-value8 {
+	color: red;
+}
+
+#test-value9 {
+	color: red;
+}
+
+#test-value10 {
+	color: red;
+}
+
+p {
+	color: red;
+}
+
+#testvalue {
+	
+}

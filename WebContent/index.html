@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!--IE8开启标准渲染模式-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--定义视窗，页面缩放比1：1，禁止用户缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>战疫助手-首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/adjust.css">
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+</head>
+<body onload="startTime()">
+
+<!--导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <!--可以适应设备-->
+        <div class="navbar-header">
+            <!--给这个button绑定到navbar-collapse类-->
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">战疫助手</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+
+        <!--右上角导航-->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="infection.html" target="_blank">疫情数据</a></li>
+                <li><a href="news.html" target="_blank">舆情数据</a></li>
+                <li><a href="predict-easy.html" target="_blank">实用版预测</a></li>
+                <li><a href="predict-pro.html" target="_blank">专业版预测</a></li>
+            </ul>
+        </div>
+        <!--右上角导航-->
+
+    </div>
+</nav>
+<!--导航栏-->
+
+<!--home-->
+<section id="home">
+    <div class="lvjing">
+        <!--使用栅格系统-->
+        <div class="container">
+            <div class="row animate__animated animate__zoomIn" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="10">
+               <div class="col-md-1">
+               </div>
+                <div class="col-md-10">
+                    <h1>欢迎使用战疫助手!</h1>
+                    <hr/>
+                    <p class="date-time"><span id="nowDateTimeSpan"></span></p>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+            <div class="row animate__animated animate__zoomIn">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10">
+                    <a class="a1" href="#zimokuai"><span class="glyphicon glyphicon-menu-down" style="padding-top: 20px"></span></a>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--home-->
+
+<!--子模块-->
+<section id="zimokuai">
+    <div class="container">
+        <div class="title">
+            <p>系统模块</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-3 animate__animated animate__rollIn">
+            <a href="infection.html">
+                <img src="images/yiqing.png" class="img-responsive img-circle" alt="疫情数据"/>
+                <h3>疫情数据</h3>
+                <p>新冠肺炎期间疫情数据</p>
+            </a>
+        </div>
+        <div class="col-md-3 animate__animated animate__rollIn">
+            <a href="news.html">
+                <img src="images/yuqing.png" class="img-responsive img-circle" alt="舆情数据"/>
+                <h3>舆情数据</h3>
+                <p>新冠肺炎期间舆情数据</p>
+            </a>
+        </div>
+        <div class="col-md-3 animate__animated animate__rollIn">
+            <a href="predict-easy.html">
+                <img src="images/easy.png" class="img-responsive img-circle" alt="实用版预测"/>
+                <h3>实用版预测</h3>
+                <p>耦合预测-实用版</p>
+            </a>
+        </div>
+        <div class="col-md-3 animate__animated animate__rollIn">
+            <a a href="predict-pro.html">
+                <img src="images/pro.png" class="img-responsive img-circle" alt="专业版预测"/>
+                <h3>专业版预测</h3>
+                <p>耦合预测-专业版</p>
+            </a>
+        </div>
+    </div>
+
+</section>
+<!--子模块-->
+
+<!--footer底部区域-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>©copyright&nbsp;2020&nbsp;武汉大学信息管理学院</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer底部区域-->
+
+<!--时间函数-->
+<script language="JavaScript">
+    function startTime(){
+        var today=new Date();//定义日期对象
+        var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年
+        var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年
+        var dd = today.getDate();//通过日期对象的getDate()方法返回年
+        var hh=today.getHours();//通过日期对象的getHours方法返回小时
+        var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟
+        var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒
+        // 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09
+        MM=checkTime(MM);
+        dd=checkTime(dd);
+        mm=checkTime(mm);
+        ss=checkTime(ss);
+        var day; //用于保存星期（getDay()方法得到星期编号）
+        if(today.getDay()==0)   day   =   "星期日 "
+        if(today.getDay()==1)   day   =   "星期一 "
+        if(today.getDay()==2)   day   =   "星期二 "
+        if(today.getDay()==3)   day   =   "星期三 "
+        if(today.getDay()==4)   day   =   "星期四 "
+        if(today.getDay()==5)   day   =   "星期五 "
+        if(today.getDay()==6)   day   =   "星期六 "
+        document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + day + hh+":"+mm+":"+ss;
+        setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法
+    }
+
+    function checkTime(i){
+        if (i<10){
+            i="0" + i;
+        }
+        return i;
+    }
+</script>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js/"></script>
+</body>
+</html>
